@@ -1,0 +1,33 @@
+video:
+  video1:
+    name: First video
+    width: 640
+    height: 480
+    video_bitrate: 2048
+    audio_bitrate: 1024
+    user_id: admin
+    filename: first_video.flv
+  video2:
+    name: Second video
+    width: 1024
+    height: 768
+    video_bitrate: 2048
+    audio_bitrate: 1024
+    user_id: admin
+    filename: sec_video.flv
+  video3:
+    name: Third video
+    width: 640
+    height: 480
+    video_bitrate: 2048
+    audio_bitrate: 1024
+    user_id: tester
+    filename: third_video.flv
+  video4:
+    name: Fourth video
+    width: 1024
+    height: 768
+    video_bitrate: 2048
+    audio_bitrate: 1024
+    user_id: tester
+    filename: fourth_video.flv

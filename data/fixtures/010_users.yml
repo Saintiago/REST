@@ -1,0 +1,7 @@
+users:
+  admin: 
+    login: admin
+    password: qwerty
+  tester: 
+    login: tester
+    password: 12345

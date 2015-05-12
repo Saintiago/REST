@@ -1,0 +1,18 @@
+propel:
+  users:
+    id: ~
+    login: { type: varchar(255), required: true }
+    password: { type: varchar(255), required: true }
+    created_at: ~
+    updated_at: ~
+  video:
+    id: ~
+    name: { type: varchar(255), required: true }
+    width: { type: integer }
+    height: { type: integer }
+    video_bitrate: { type: float }
+    audio_bitrate: { type: float }
+    user_id: { type: integer, foreignTable: users, foreignReference: id, required: true }
+    filename: { type: varchar(255) }
+    created_at: ~
+    updated_at: ~

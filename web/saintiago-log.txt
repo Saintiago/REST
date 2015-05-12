@@ -1,0 +1,17 @@
+10.05.2015 23:53:42 -- $arValues: array (
+  'name' => '123',
+  'file' => 
+  sfValidatedFile::__set_state(array(
+     'originalName' => 'lexa.avi',
+     'tempName' => 'D:\\wamp\\tmp\\php344D.tmp',
+     'savedName' => NULL,
+     'type' => 'video/x-msvideo',
+     'size' => 449024,
+     'path' => NULL,
+  )),
+)
+11.05.2015 10:43:30 -- $res: '/uploads/video/481a8b575a0e.jpg'
+11.05.2015 10:56:31 -- $values["file"]->getOriginalName(): '481a8b575a0e.jpg'
+11.05.2015 12:09:48 -- $res: 1
+11.05.2015 12:10:27 -- $res: 1
+11.05.2015 12:10:58 -- $res: 1

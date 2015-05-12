@@ -4,13 +4,42 @@
 # default rules
 homepage:
   url:   /
-  param: { module: default, action: index }
+  param: { module: video, action: index }
+
+# Add video form 
+video_new: 
+  url: /video/new/
+  param: { module: video, action: new }
+  
+# Update video form 
+video_edit: 
+  url: /video/edit/:id
+  param: { module: video, action: edit }
+
+# Add video  
+video_post: 
+  url: /video/post/
+  param: { module: video, action: post }
+
+# Update video
+video_put:
+  url: /video/put/:id
+  param: { module: video, action: put }
+
+# Download original FLV or converted MPEG
+video_get:
+  url: /video/get/:id
+  param: { module: video, action: get }
+
+# Get info: width, height, audio- and video bitrate
+video_info:
+  url: /video/info/:id
+  param: { module: video, action: info }
+
+# Delete video
+video_delete:
+  url: /video/delete/:id
+  param: { module: video, action: delete }
 
 # generic rules
 # please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
