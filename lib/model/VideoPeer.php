@@ -18,23 +18,6 @@
  */
 class VideoPeer extends BaseVideoPeer {
     
-    public static function PutVideo($values, $id = NULL)
-    {
-        if ($id != NULL)
-            $video = VideoPeer::retrieveByPk($id);
-        else
-            $video = new Video;
-        
-        $video->setName($values["name"]);
-        $video->setFilename($values["file"]->save(sfConfig::get('app_video_path') . $values["file"]->getOriginalName()));
-        $video->setWidth(self::getFileWidth($video->getFilename()));
-        $video->setHeight(self::getFileHeight($video->getFilename()));
-        $video->setAudioBitrate(self::getFileAudioBitrate($video->getFilename()));
-        $video->setVideoBitrate(self::getFileVideoBitrate($video->getFilename()));
-        $video->setUserId(self::getUserId());
-        return $video->save();
-    }
-
     public static function getInfo($id)
     {
         $video = VideoPeer::retrieveByPk($id);
@@ -49,34 +32,4 @@ class VideoPeer extends BaseVideoPeer {
         return $arInfo;
     }
         
-    private static function getFileWidth($file)
-    {
-        // @TODO return video width
-        return "640";    
-    }
-    
-    private static function getFileHeight($file)
-    {
-        // @TODO return video height
-        return "480";    
-    }
-    
-    private static function getFileAudioBitrate($file)
-    {
-        // @TODO return audio bitrate
-        return "1024";    
-    }
-    
-    private static function getFileVideoBitrate($file)
-    {
-        // @TODO return video bitrate
-        return "2048";    
-    }
-    
-    private static function getUserId()
-    {
-        // @TODO return current user ID
-        return "1";    
-    }
-    
 } // VideoPeer

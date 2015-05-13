@@ -26,14 +26,14 @@
 
         public function executeNew(sfWebRequest $request)
         {
-            $this->form = new RestForm();
+            $this->form = new UploadVideoForm();
         }
 
         public function executePost(sfWebRequest $request)
         {
             $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-            $this->form = new RestForm();
+            $this->form = new UploadVideoForm();
 
             $this->processForm($request, $this->form);
 
@@ -43,14 +43,14 @@
         public function executeEdit(sfWebRequest $request)
         {
             $this->forward404Unless($video = VideoPeer::retrieveByPk($request->getParameter('id')), sprintf('Object video does not exist (%s).', $request->getParameter('id')));
-            $this->form = new RestForm($video);
+            $this->form = new UploadVideoForm($video);
         }
 
         public function executePut(sfWebRequest $request)
         {
             $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
             $this->forward404Unless($video = VideoPeer::retrieveByPk($request->getParameter('id')), sprintf('Object video does not exist (%s).', $request->getParameter('id')));
-            $this->form = new RestForm($video);
+            $this->form = new UploadVideoForm($video);
 
             $this->processForm($request, $this->form);
 
@@ -72,8 +72,7 @@
             $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
             if ($form->isValid())
             {
-                $values = $form->getValues();
-                VideoPeer::PutVideo($values, $request->getParameter('id', NULL));
+                $form->doSave();
             }
         }
 
