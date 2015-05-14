@@ -72,7 +72,7 @@
             $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
             if ($form->isValid())
             {
-                $form->doSave();
+                $form->save();
             }
         }
 

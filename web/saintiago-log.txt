@@ -15,3 +15,213 @@
 11.05.2015 12:09:48 -- $res: 1
 11.05.2015 12:10:27 -- $res: 1
 11.05.2015 12:10:58 -- $res: 1
+14.05.2015 10:47:02 -- $output: NULL
+14.05.2015 10:47:02 -- $parsed: NULL
+14.05.2015 10:51:54 -- $output: '\'ffprobe\' is not recognized as an internal or external command,
+operable program or batch file.
+'
+14.05.2015 10:51:54 -- $parsed: NULL
+14.05.2015 10:53:27 -- $output: '\'ffprobe.exe\' is not recognized as an internal or external command,
+operable program or batch file.
+'
+14.05.2015 10:53:27 -- $parsed: NULL
+14.05.2015 11:02:30 -- $output: '\'ffprobe.exe\' is not recognized as an internal or external command,
+operable program or batch file.
+'
+14.05.2015 11:02:30 -- $parsed: NULL
+14.05.2015 11:06:04 -- $output: '{
+    "streams": [
+        {
+            "index": 0,
+            "codec_name": "mpeg4",
+            "codec_long_name": "MPEG-4 part 2",
+            "codec_type": "video",
+            "codec_time_base": "1/30000",
+            "codec_tag_string": "DX50",
+            "codec_tag": "0x30355844",
+            "width": 320,
+            "height": 240,
+            "coded_width": 320,
+            "coded_height": 240,
+            "has_b_frames": 1,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "4:3",
+            "pix_fmt": "yuv420p",
+            "level": -99,
+            "chroma_location": "left",
+            "refs": 1,
+            "quarter_sample": "0",
+            "divx_packed": "0",
+            "r_frame_rate": "12/1",
+            "avg_frame_rate": "12/1",
+            "time_base": "1/12",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 77,
+            "duration": "6.416667",
+            "nb_frames": "77",
+            "disposition": {
+                "default": 0,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0
+            }
+        },
+        {
+            "index": 1,
+            "codec_name": "mp3",
+            "codec_long_name": "MP3 (MPEG audio layer 3)",
+            "codec_type": "audio",
+            "codec_time_base": "1/11025",
+            "codec_tag_string": "U[0][0][0]",
+            "codec_tag": "0x0055",
+            "sample_fmt": "s16p",
+            "sample_rate": "11025",
+            "channels": 1,
+            "channel_layout": "mono",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/2500",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "bit_rate": "20000",
+            "nb_frames": "16380",
+            "disposition": {
+                "default": 0,
+                "dub": 0,
+                "original": 0,
+                "comment": 0,
+                "lyrics": 0,
+                "karaoke": 0,
+                "forced": 0,
+                "hearing_impaired": 0,
+                "visual_impaired": 0,
+                "clean_effects": 0,
+                "attached_pic": 0
+            }
+        }
+    ],
+    "format": {
+        "filename": "D:\\\\my_projects\\\\rest.local\\\\web\\\\uploads/video/lexa.avi",
+        "nb_streams": 2,
+        "nb_programs": 0,
+        "format_name": "avi",
+        "format_long_name": "AVI (Audio Video Interleaved)",
+        "start_time": "0.000000",
+        "duration": "6.416667",
+        "size": "449024",
+        "bit_rate": "559822",
+        "probe_score": 100
+    }
+}
+'
+14.05.2015 11:06:04 -- $parsed: array (
+  'streams' => 
+  array (
+    0 => 
+    array (
+      'index' => 0,
+      'codec_name' => 'mpeg4',
+      'codec_long_name' => 'MPEG-4 part 2',
+      'codec_type' => 'video',
+      'codec_time_base' => '1/30000',
+      'codec_tag_string' => 'DX50',
+      'codec_tag' => '0x30355844',
+      'width' => 320,
+      'height' => 240,
+      'coded_width' => 320,
+      'coded_height' => 240,
+      'has_b_frames' => 1,
+      'sample_aspect_ratio' => '1:1',
+      'display_aspect_ratio' => '4:3',
+      'pix_fmt' => 'yuv420p',
+      'level' => -99,
+      'chroma_location' => 'left',
+      'refs' => 1,
+      'quarter_sample' => '0',
+      'divx_packed' => '0',
+      'r_frame_rate' => '12/1',
+      'avg_frame_rate' => '12/1',
+      'time_base' => '1/12',
+      'start_pts' => 0,
+      'start_time' => '0.000000',
+      'duration_ts' => 77,
+      'duration' => '6.416667',
+      'nb_frames' => '77',
+      'disposition' => 
+      array (
+        'default' => 0,
+        'dub' => 0,
+        'original' => 0,
+        'comment' => 0,
+        'lyrics' => 0,
+        'karaoke' => 0,
+        'forced' => 0,
+        'hearing_impaired' => 0,
+        'visual_impaired' => 0,
+        'clean_effects' => 0,
+        'attached_pic' => 0,
+      ),
+    ),
+    1 => 
+    array (
+      'index' => 1,
+      'codec_name' => 'mp3',
+      'codec_long_name' => 'MP3 (MPEG audio layer 3)',
+      'codec_type' => 'audio',
+      'codec_time_base' => '1/11025',
+      'codec_tag_string' => 'U[0][0][0]',
+      'codec_tag' => '0x0055',
+      'sample_fmt' => 's16p',
+      'sample_rate' => '11025',
+      'channels' => 1,
+      'channel_layout' => 'mono',
+      'bits_per_sample' => 0,
+      'r_frame_rate' => '0/0',
+      'avg_frame_rate' => '0/0',
+      'time_base' => '1/2500',
+      'start_pts' => 0,
+      'start_time' => '0.000000',
+      'bit_rate' => '20000',
+      'nb_frames' => '16380',
+      'disposition' => 
+      array (
+        'default' => 0,
+        'dub' => 0,
+        'original' => 0,
+        'comment' => 0,
+        'lyrics' => 0,
+        'karaoke' => 0,
+        'forced' => 0,
+        'hearing_impaired' => 0,
+        'visual_impaired' => 0,
+        'clean_effects' => 0,
+        'attached_pic' => 0,
+      ),
+    ),
+  ),
+  'format' => 
+  array (
+    'filename' => 'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi',
+    'nb_streams' => 2,
+    'nb_programs' => 0,
+    'format_name' => 'avi',
+    'format_long_name' => 'AVI (Audio Video Interleaved)',
+    'start_time' => '0.000000',
+    'duration' => '6.416667',
+    'size' => '449024',
+    'bit_rate' => '559822',
+    'probe_score' => 100,
+  ),
+)
+14.05.2015 11:26:49 -- $filePath: 'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi'
+14.05.2015 11:28:20 -- $fileMime: 'video/x-msvideo'
+14.05.2015 11:59:23 -- $fileName: 'D:\\my_projects\\rest.local\\web\\uploads/video/D:\\my_projects\\rest.local\\web\\uploads\\video\\vidEA27.tmp.avi'

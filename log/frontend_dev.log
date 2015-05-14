@@ -4296,3 +4296,475 @@ May 13 23:21:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/h
 May 13 23:21:09 symfony [info] {sfWebDebugLogger} Configuration 6.61 ms (8)
 May 13 23:21:09 symfony [info] {sfWebDebugLogger} Factories 28.58 ms (1)
 May 13 23:21:09 symfony [info] {sfWebDebugLogger} Action "video/post" 78.08 ms (1)
+May 14 10:40:47 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'video',  'action' => 'index',)
+May 14 10:40:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:40:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:40:47 symfony [info] {videoActions} Call "videoActions->executeIndex()"
+May 14 10:40:48 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 10:40:48 symfony [debug] {sfPropelLogger} time:  0.035 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video`
+May 14 10:40:48 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/indexSuccess.php"
+May 14 10:40:48 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:40:48 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:40:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 10:40:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:40:48 symfony [info] {sfWebDebugLogger} Configuration 7.68 ms (9)
+May 14 10:40:48 symfony [info] {sfWebDebugLogger} Factories 335.55 ms (1)
+May 14 10:40:48 symfony [info] {sfWebDebugLogger} Action "video/index" 237.55 ms (1)
+May 14 10:40:48 symfony [info] {sfWebDebugLogger} View "Success" for "video/index" 279.52 ms (1)
+May 14 10:40:48 symfony [info] {sfWebResponse} Send content (35232 o)
+May 14 10:40:54 symfony [info] {sfPatternRouting} Match route "video_new" (/video/new/) for /video/new/ with parameters array (  'module' => 'video',  'action' => 'new',)
+May 14 10:40:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:40:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:40:54 symfony [info] {videoActions} Call "videoActions->executeNew()"
+May 14 10:40:55 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 10:40:55 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 10:40:55 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:40:55 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:40:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 10:40:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:40:55 symfony [info] {sfWebDebugLogger} Configuration 7.42 ms (9)
+May 14 10:40:55 symfony [info] {sfWebDebugLogger} Factories 27.37 ms (1)
+May 14 10:40:55 symfony [info] {sfWebDebugLogger} Action "video/new" 237.18 ms (1)
+May 14 10:40:55 symfony [info] {sfWebDebugLogger} View "Success" for "video/new" 82.63 ms (1)
+May 14 10:40:55 symfony [info] {sfWebDebugLogger} Partial "video/_form" 39.86 ms (1)
+May 14 10:40:55 symfony [info] {sfWebResponse} Send content (31839 o)
+May 14 10:41:12 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 10:41:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:41:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:41:12 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 10:41:12 symfony [err] {sfException} Call to undefined method UploadVideoForm::doSave.
+May 14 10:41:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 14 10:41:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:41:12 symfony [info] {sfWebDebugLogger} Configuration 6.23 ms (8)
+May 14 10:41:12 symfony [info] {sfWebDebugLogger} Factories 27.60 ms (1)
+May 14 10:41:12 symfony [info] {sfWebDebugLogger} Action "video/post" 189.51 ms (1)
+May 14 10:43:06 symfony [info] {sfPatternRouting} Match route "video_new" (/video/new/) for /video/new/ with parameters array (  'module' => 'video',  'action' => 'new',)
+May 14 10:43:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:43:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:43:06 symfony [info] {videoActions} Call "videoActions->executeNew()"
+May 14 10:43:06 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 10:43:06 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 10:43:06 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:43:06 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:43:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 10:43:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:43:06 symfony [info] {sfWebDebugLogger} Configuration 7.01 ms (9)
+May 14 10:43:06 symfony [info] {sfWebDebugLogger} Factories 26.35 ms (1)
+May 14 10:43:06 symfony [info] {sfWebDebugLogger} Action "video/new" 25.02 ms (1)
+May 14 10:43:06 symfony [info] {sfWebDebugLogger} View "Success" for "video/new" 19.17 ms (1)
+May 14 10:43:06 symfony [info] {sfWebDebugLogger} Partial "video/_form" 5.64 ms (1)
+May 14 10:43:06 symfony [info] {sfWebResponse} Send content (31838 o)
+May 14 10:43:18 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 10:43:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:43:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:43:18 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 10:43:18 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 10:45:21 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 10:45:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:45:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:45:21 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 10:45:21 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 10:45:21 symfony [debug] {sfPropelLogger} time:  0.021 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'qweqwe',640,480,2048,1024,1,'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi','2015-05-14 10:45:21','2015-05-14 10:45:21')
+May 14 10:45:21 symfony [info] {videoActions} Change template to "CURRENT/new"
+May 14 10:45:21 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 10:45:21 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 10:45:21 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:45:21 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:45:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 10:45:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:45:21 symfony [info] {sfWebDebugLogger} Configuration 18.07 ms (9)
+May 14 10:45:21 symfony [info] {sfWebDebugLogger} Factories 40.58 ms (1)
+May 14 10:45:21 symfony [info] {sfWebDebugLogger} Action "video/post" 109.15 ms (1)
+May 14 10:45:21 symfony [info] {sfWebDebugLogger} View "Success" for "video/post" 32.37 ms (1)
+May 14 10:45:21 symfony [info] {sfWebDebugLogger} Partial "video/_form" 9.70 ms (1)
+May 14 10:45:21 symfony [info] {sfWebResponse} Send content (36353 o)
+May 14 10:47:02 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/20 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '20',)
+May 14 10:47:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:47:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:47:02 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 10:47:02 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 10:47:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='20'
+May 14 10:47:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='VIDEO', `UPDATED_AT`='2015-05-14 10:47:02' WHERE video.ID=20
+May 14 10:47:02 symfony [info] {videoActions} Change template to "CURRENT/edit"
+May 14 10:47:02 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 10:47:02 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 10:47:02 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:47:02 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:47:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 10:47:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:47:02 symfony [info] {sfWebDebugLogger} Configuration 7.78 ms (9)
+May 14 10:47:02 symfony [info] {sfWebDebugLogger} Factories 28.65 ms (1)
+May 14 10:47:02 symfony [info] {sfWebDebugLogger} Action "video/put" 113.41 ms (1)
+May 14 10:47:02 symfony [info] {sfWebDebugLogger} View "Success" for "video/put" 25.97 ms (1)
+May 14 10:47:02 symfony [info] {sfWebDebugLogger} Partial "video/_form" 8.37 ms (1)
+May 14 10:47:02 symfony [info] {sfWebResponse} Send content (37279 o)
+May 14 10:51:54 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/20 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '20',)
+May 14 10:51:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:51:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:51:54 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 10:51:54 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 10:51:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='20'
+May 14 10:51:54 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='VIDEO111', `UPDATED_AT`='2015-05-14 10:51:54' WHERE video.ID=20
+May 14 10:51:54 symfony [info] {videoActions} Change template to "CURRENT/edit"
+May 14 10:51:54 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 10:51:54 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 10:51:54 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:51:54 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:51:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 10:51:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:51:54 symfony [info] {sfWebDebugLogger} Configuration 7.48 ms (9)
+May 14 10:51:54 symfony [info] {sfWebDebugLogger} Factories 27.25 ms (1)
+May 14 10:51:54 symfony [info] {sfWebDebugLogger} Action "video/put" 95.08 ms (1)
+May 14 10:51:54 symfony [info] {sfWebDebugLogger} View "Success" for "video/put" 21.25 ms (1)
+May 14 10:51:54 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.53 ms (1)
+May 14 10:51:54 symfony [info] {sfWebResponse} Send content (37294 o)
+May 14 10:53:27 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/20 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '20',)
+May 14 10:53:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 10:53:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 10:53:27 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 10:53:27 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 10:53:27 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='20'
+May 14 10:53:27 symfony [info] {videoActions} Change template to "CURRENT/edit"
+May 14 10:53:27 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 10:53:27 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 10:53:27 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:53:27 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 10:53:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 10:53:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 10:53:27 symfony [info] {sfWebDebugLogger} Configuration 15.81 ms (9)
+May 14 10:53:27 symfony [info] {sfWebDebugLogger} Factories 37.29 ms (1)
+May 14 10:53:27 symfony [info] {sfWebDebugLogger} Action "video/put" 66.36 ms (1)
+May 14 10:53:27 symfony [info] {sfWebDebugLogger} View "Success" for "video/put" 26.17 ms (1)
+May 14 10:53:27 symfony [info] {sfWebDebugLogger} Partial "video/_form" 8.90 ms (1)
+May 14 10:53:28 symfony [info] {sfWebResponse} Send content (36196 o)
+May 14 11:02:30 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/20 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '20',)
+May 14 11:02:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:02:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:02:30 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 11:02:30 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:02:30 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='20'
+May 14 11:02:30 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='VIDEO1777', `UPDATED_AT`='2015-05-14 11:02:30' WHERE video.ID=20
+May 14 11:02:30 symfony [info] {videoActions} Change template to "CURRENT/edit"
+May 14 11:02:30 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 11:02:30 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:02:30 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:02:30 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:02:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:02:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:02:30 symfony [info] {sfWebDebugLogger} Configuration 9.22 ms (9)
+May 14 11:02:30 symfony [info] {sfWebDebugLogger} Factories 30.07 ms (1)
+May 14 11:02:30 symfony [info] {sfWebDebugLogger} Action "video/put" 77.40 ms (1)
+May 14 11:02:30 symfony [info] {sfWebDebugLogger} View "Success" for "video/put" 22.00 ms (1)
+May 14 11:02:30 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.41 ms (1)
+May 14 11:02:30 symfony [info] {sfWebResponse} Send content (37296 o)
+May 14 11:06:04 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/20 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '20',)
+May 14 11:06:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:06:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:06:04 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 11:06:04 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:06:04 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='20'
+May 14 11:06:04 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='VIDEO1', `UPDATED_AT`='2015-05-14 11:06:04' WHERE video.ID=20
+May 14 11:06:04 symfony [info] {videoActions} Change template to "CURRENT/edit"
+May 14 11:06:04 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 11:06:04 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:06:04 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:06:04 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:06:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:06:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:06:04 symfony [info] {sfWebDebugLogger} Configuration 10.48 ms (9)
+May 14 11:06:04 symfony [info] {sfWebDebugLogger} Factories 29.57 ms (1)
+May 14 11:06:04 symfony [info] {sfWebDebugLogger} Action "video/put" 126.80 ms (1)
+May 14 11:06:04 symfony [info] {sfWebDebugLogger} View "Success" for "video/put" 23.58 ms (1)
+May 14 11:06:04 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.73 ms (1)
+May 14 11:06:04 symfony [info] {sfWebResponse} Send content (37283 o)
+May 14 11:18:02 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/20 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '20',)
+May 14 11:18:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:18:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:18:02 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 11:18:02 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:18:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='20'
+May 14 11:18:02 symfony [info] {videoActions} Change template to "CURRENT/edit"
+May 14 11:18:02 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 11:18:02 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:18:03 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:18:03 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:18:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:18:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:18:03 symfony [info] {sfWebDebugLogger} Configuration 9.21 ms (9)
+May 14 11:18:03 symfony [info] {sfWebDebugLogger} Factories 28.07 ms (1)
+May 14 11:18:03 symfony [info] {sfWebDebugLogger} Action "video/put" 41.27 ms (1)
+May 14 11:18:03 symfony [info] {sfWebDebugLogger} View "Success" for "video/put" 23.49 ms (1)
+May 14 11:18:03 symfony [info] {sfWebDebugLogger} Partial "video/_form" 8.45 ms (1)
+May 14 11:18:03 symfony [info] {sfWebResponse} Send content (36359 o)
+May 14 11:20:31 symfony [info] {sfPatternRouting} Match route "video_new" (/video/new/) for /video/new/ with parameters array (  'module' => 'video',  'action' => 'new',)
+May 14 11:20:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:20:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:20:31 symfony [info] {videoActions} Call "videoActions->executeNew()"
+May 14 11:20:31 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:20:31 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:20:31 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:20:31 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:20:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:20:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:20:31 symfony [info] {sfWebDebugLogger} Configuration 37.38 ms (10)
+May 14 11:20:31 symfony [info] {sfWebDebugLogger} Factories 28.09 ms (1)
+May 14 11:20:31 symfony [info] {sfWebDebugLogger} Action "video/new" 24.27 ms (1)
+May 14 11:20:31 symfony [info] {sfWebDebugLogger} View "Success" for "video/new" 24.03 ms (1)
+May 14 11:20:31 symfony [info] {sfWebDebugLogger} Partial "video/_form" 8.39 ms (1)
+May 14 11:20:31 symfony [info] {sfWebResponse} Send content (31885 o)
+May 14 11:20:40 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 11:20:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:20:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:20:40 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 11:20:40 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:20:40 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php on line 10 (Undefined offset: 0)
+May 14 11:20:40 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php on line 11 (Undefined offset: 0)
+May 14 11:20:40 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php on line 12 (Undefined offset: 1)
+May 14 11:20:40 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`VIDEO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'Lexa',559822,1,'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi','2015-05-14 11:20:40','2015-05-14 11:20:40')
+May 14 11:20:40 symfony [info] {videoActions} Change template to "CURRENT/new"
+May 14 11:20:40 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:20:40 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:20:40 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:20:40 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:20:40 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php:10))
+May 14 11:20:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:20:40 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php:10))
+May 14 11:20:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:20:40 symfony [info] {sfWebDebugLogger} Configuration 7.03 ms (9)
+May 14 11:20:40 symfony [info] {sfWebDebugLogger} Factories 26.79 ms (1)
+May 14 11:20:40 symfony [info] {sfWebDebugLogger} Action "video/post" 463.04 ms (1)
+May 14 11:20:40 symfony [info] {sfWebDebugLogger} View "Success" for "video/post" 22.58 ms (1)
+May 14 11:20:40 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.39 ms (1)
+May 14 11:20:40 symfony [info] {sfWebResponse} Send content (36263 o)
+May 14 11:21:58 symfony [info] {sfPatternRouting} Match route "video_new" (/video/new/) for /video/new/ with parameters array (  'module' => 'video',  'action' => 'new',)
+May 14 11:21:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:21:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:21:58 symfony [info] {videoActions} Call "videoActions->executeNew()"
+May 14 11:21:58 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:21:58 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:21:58 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:21:58 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:21:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:21:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:21:58 symfony [info] {sfWebDebugLogger} Configuration 6.20 ms (9)
+May 14 11:21:58 symfony [info] {sfWebDebugLogger} Factories 27.00 ms (1)
+May 14 11:21:58 symfony [info] {sfWebDebugLogger} Action "video/new" 24.40 ms (1)
+May 14 11:21:58 symfony [info] {sfWebDebugLogger} View "Success" for "video/new" 21.29 ms (1)
+May 14 11:21:58 symfony [info] {sfWebDebugLogger} Partial "video/_form" 5.84 ms (1)
+May 14 11:21:58 symfony [info] {sfWebResponse} Send content (31882 o)
+May 14 11:22:08 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 11:22:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:22:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:22:09 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 11:22:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:22:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'Lexa',320,240,559822,20000,1,'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi','2015-05-14 11:22:09','2015-05-14 11:22:09')
+May 14 11:22:09 symfony [info] {videoActions} Change template to "CURRENT/new"
+May 14 11:22:09 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:22:09 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:22:09 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:22:09 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:22:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:22:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:22:09 symfony [info] {sfWebDebugLogger} Configuration 6.40 ms (9)
+May 14 11:22:09 symfony [info] {sfWebDebugLogger} Factories 25.64 ms (1)
+May 14 11:22:09 symfony [info] {sfWebDebugLogger} Action "video/post" 129.69 ms (1)
+May 14 11:22:09 symfony [info] {sfWebDebugLogger} View "Success" for "video/post" 23.74 ms (1)
+May 14 11:22:09 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.66 ms (1)
+May 14 11:22:09 symfony [info] {sfWebResponse} Send content (36360 o)
+May 14 11:26:49 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/22 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '22',)
+May 14 11:26:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:26:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:26:49 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 11:26:49 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:26:49 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='22'
+May 14 11:26:49 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php on line 83 (Missing argument 1 for UploadVideoForm::moveUploadedFile(), called in D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php on line 49 and defined)
+May 14 11:26:49 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php on line 86 (Undefined variable: sfValidatedFile)
+May 14 11:27:57 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/22 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '22',)
+May 14 11:27:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:27:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:27:57 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 11:27:57 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "video/put".
+May 14 11:27:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 14 11:27:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:27:57 symfony [info] {sfWebDebugLogger} Configuration 5.30 ms (8)
+May 14 11:27:57 symfony [info] {sfWebDebugLogger} Factories 26.93 ms (1)
+May 14 11:27:57 symfony [info] {sfWebDebugLogger} Action "video/put" 76.68 ms (1)
+May 14 11:28:10 symfony [info] {sfPatternRouting} Match route "video_edit" (/video/edit/:id) for /video/edit/19 with parameters array (  'module' => 'video',  'action' => 'edit',  'id' => '19',)
+May 14 11:28:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:28:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:28:10 symfony [info] {videoActions} Call "videoActions->executeEdit()"
+May 14 11:28:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.5 MB | mempeak:    5.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:28:10 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='19'
+May 14 11:28:10 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 11:28:10 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:28:10 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:28:10 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:28:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:28:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:28:10 symfony [info] {sfWebDebugLogger} Configuration 6.49 ms (9)
+May 14 11:28:10 symfony [info] {sfWebDebugLogger} Factories 26.01 ms (1)
+May 14 11:28:10 symfony [info] {sfWebDebugLogger} Action "video/edit" 35.70 ms (1)
+May 14 11:28:10 symfony [info] {sfWebDebugLogger} View "Success" for "video/edit" 22.35 ms (1)
+May 14 11:28:10 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.38 ms (1)
+May 14 11:28:10 symfony [info] {sfWebResponse} Send content (35292 o)
+May 14 11:28:20 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/19 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '19',)
+May 14 11:28:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:28:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:28:20 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 14 11:28:20 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:28:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='19'
+May 14 11:28:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='LexaTest', `WIDTH`=320, `HEIGHT`=240, `VIDEO_BITRATE`=559822, `AUDIO_BITRATE`=20000, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi', `UPDATED_AT`='2015-05-14 11:28:20' WHERE video.ID=19
+May 14 11:28:20 symfony [info] {videoActions} Change template to "CURRENT/edit"
+May 14 11:28:20 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 14 11:28:20 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:28:20 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:28:20 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:28:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:28:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:28:20 symfony [info] {sfWebDebugLogger} Configuration 6.10 ms (9)
+May 14 11:28:20 symfony [info] {sfWebDebugLogger} Factories 26.48 ms (1)
+May 14 11:28:20 symfony [info] {sfWebDebugLogger} Action "video/put" 118.57 ms (1)
+May 14 11:28:20 symfony [info] {sfWebDebugLogger} View "Success" for "video/put" 21.99 ms (1)
+May 14 11:28:20 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.24 ms (1)
+May 14 11:28:20 symfony [info] {sfWebResponse} Send content (37650 o)
+May 14 11:42:16 symfony [info] {sfPatternRouting} Match route "video_new" (/video/new/) for /video/new/ with parameters array (  'module' => 'video',  'action' => 'new',)
+May 14 11:42:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:42:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:42:16 symfony [info] {videoActions} Call "videoActions->executeNew()"
+May 14 11:42:16 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:42:16 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:42:16 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:42:16 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:42:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:42:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:42:16 symfony [info] {sfWebDebugLogger} Configuration 11.40 ms (9)
+May 14 11:42:16 symfony [info] {sfWebDebugLogger} Factories 31.86 ms (1)
+May 14 11:42:16 symfony [info] {sfWebDebugLogger} Action "video/new" 27.21 ms (1)
+May 14 11:42:16 symfony [info] {sfWebDebugLogger} View "Success" for "video/new" 27.68 ms (1)
+May 14 11:42:16 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.16 ms (1)
+May 14 11:42:16 symfony [info] {sfWebResponse} Send content (31883 o)
+May 14 11:43:26 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 11:43:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:43:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:43:26 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 11:43:26 symfony [info] {videoActions} Change template to "CURRENT/new"
+May 14 11:43:26 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:43:26 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:43:26 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:43:26 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:43:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:43:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:43:26 symfony [info] {sfWebDebugLogger} Configuration 7.39 ms (9)
+May 14 11:43:26 symfony [info] {sfWebDebugLogger} Factories 27.27 ms (1)
+May 14 11:43:26 symfony [info] {sfWebDebugLogger} Action "video/post" 30.66 ms (1)
+May 14 11:43:26 symfony [info] {sfWebDebugLogger} View "Success" for "video/post" 21.20 ms (1)
+May 14 11:43:26 symfony [info] {sfWebDebugLogger} Partial "video/_form" 5.77 ms (1)
+May 14 11:43:26 symfony [info] {sfWebResponse} Send content (33163 o)
+May 14 11:43:42 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 11:43:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:43:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:43:42 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 11:43:42 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:43:42 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php on line 63 (Undefined variable: mime)
+May 14 11:43:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    8.0 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'111112',320,240,559822,20000,1,'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi','2015-05-14 11:43:42','2015-05-14 11:43:42')
+May 14 11:43:42 symfony [info] {videoActions} Change template to "CURRENT/new"
+May 14 11:43:42 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:43:42 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:43:42 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:43:42 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:43:42 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php:63))
+May 14 11:43:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:43:42 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php:63))
+May 14 11:43:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:43:42 symfony [info] {sfWebDebugLogger} Configuration 7.35 ms (9)
+May 14 11:43:42 symfony [info] {sfWebDebugLogger} Factories 27.61 ms (1)
+May 14 11:43:42 symfony [info] {sfWebDebugLogger} Action "video/post" 210.65 ms (1)
+May 14 11:43:42 symfony [info] {sfWebDebugLogger} View "Success" for "video/post" 22.89 ms (1)
+May 14 11:43:42 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.41 ms (1)
+May 14 11:43:42 symfony [info] {sfWebResponse} Send content (36391 o)
+May 14 11:44:30 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 11:44:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:44:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:44:30 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 11:44:30 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:44:30 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'111112',320,240,559822,20000,1,'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi','2015-05-14 11:44:30','2015-05-14 11:44:30')
+May 14 11:44:30 symfony [info] {videoActions} Change template to "CURRENT/new"
+May 14 11:44:30 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:44:30 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:44:30 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:44:30 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:44:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:44:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:44:30 symfony [info] {sfWebDebugLogger} Configuration 8.56 ms (9)
+May 14 11:44:30 symfony [info] {sfWebDebugLogger} Factories 28.40 ms (1)
+May 14 11:44:30 symfony [info] {sfWebDebugLogger} Action "video/post" 125.88 ms (1)
+May 14 11:44:30 symfony [info] {sfWebDebugLogger} View "Success" for "video/post" 21.86 ms (1)
+May 14 11:44:30 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.72 ms (1)
+May 14 11:44:30 symfony [info] {sfWebResponse} Send content (36425 o)
+May 14 11:59:17 symfony [info] {sfPatternRouting} Match route "video_new" (/video/new/) for /video/new/ with parameters array (  'module' => 'video',  'action' => 'new',)
+May 14 11:59:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:59:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:59:17 symfony [info] {videoActions} Call "videoActions->executeNew()"
+May 14 11:59:17 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 11:59:17 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 11:59:17 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:59:17 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 11:59:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 11:59:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:59:17 symfony [info] {sfWebDebugLogger} Configuration 8.11 ms (9)
+May 14 11:59:17 symfony [info] {sfWebDebugLogger} Factories 30.43 ms (1)
+May 14 11:59:17 symfony [info] {sfWebDebugLogger} Action "video/new" 25.35 ms (1)
+May 14 11:59:17 symfony [info] {sfWebDebugLogger} View "Success" for "video/new" 20.33 ms (1)
+May 14 11:59:17 symfony [info] {sfWebDebugLogger} Partial "video/_form" 5.76 ms (1)
+May 14 11:59:17 symfony [info] {sfWebResponse} Send content (31882 o)
+May 14 11:59:23 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 11:59:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 11:59:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 11:59:23 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 11:59:23 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 11:59:23 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php on line 101 (Undefined variable: filename)
+May 14 11:59:23 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\exception\sfException.class.php on line 107 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php:101))
+May 14 11:59:23 symfony [err] {RuntimeException} You must give a "path" when you give a relative file name.
+May 14 11:59:23 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\exception\sfException.class.php on line 161 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php:101))
+May 14 11:59:23 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php:101))
+May 14 11:59:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 14 11:59:23 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\form\UploadVideoForm.class.php:101))
+May 14 11:59:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 11:59:24 symfony [info] {sfWebDebugLogger} Configuration 6.68 ms (8)
+May 14 11:59:24 symfony [info] {sfWebDebugLogger} Factories 26.46 ms (1)
+May 14 11:59:24 symfony [info] {sfWebDebugLogger} Action "video/post" 301.96 ms (1)
+May 14 12:10:53 symfony [info] {sfPatternRouting} Match route "video_new" (/video/new/) for /video/new/ with parameters array (  'module' => 'video',  'action' => 'new',)
+May 14 12:10:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 12:10:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 12:10:53 symfony [info] {videoActions} Call "videoActions->executeNew()"
+May 14 12:10:53 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 12:10:53 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 12:10:53 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 12:10:53 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 12:10:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 12:10:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 12:10:53 symfony [info] {sfWebDebugLogger} Configuration 7.67 ms (9)
+May 14 12:10:53 symfony [info] {sfWebDebugLogger} Factories 26.31 ms (1)
+May 14 12:10:53 symfony [info] {sfWebDebugLogger} Action "video/new" 24.78 ms (1)
+May 14 12:10:53 symfony [info] {sfWebDebugLogger} View "Success" for "video/new" 21.31 ms (1)
+May 14 12:10:53 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.16 ms (1)
+May 14 12:10:53 symfony [info] {sfWebResponse} Send content (31882 o)
+May 14 12:11:11 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 14 12:11:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 14 12:11:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 14 12:11:11 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 14 12:11:11 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.5 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 14 12:11:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'qweqwe',320,240,559822,20000,1,'D:\\my_projects\\rest.local\\web\\uploads/video/4203f58462e1557fcc603e2f0b917a70333ca06c.avi','2015-05-14 12:11:11','2015-05-14 12:11:11')
+May 14 12:11:11 symfony [info] {videoActions} Change template to "CURRENT/new"
+May 14 12:11:11 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/newSuccess.php"
+May 14 12:11:11 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 14 12:11:11 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 12:11:11 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 14 12:11:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 14 12:11:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 14 12:11:11 symfony [info] {sfWebDebugLogger} Configuration 11.28 ms (9)
+May 14 12:11:11 symfony [info] {sfWebDebugLogger} Factories 30.08 ms (1)
+May 14 12:11:11 symfony [info] {sfWebDebugLogger} Action "video/post" 120.92 ms (1)
+May 14 12:11:11 symfony [info] {sfWebDebugLogger} View "Success" for "video/post" 22.32 ms (1)
+May 14 12:11:11 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.35 ms (1)
+May 14 12:11:11 symfony [info] {sfWebResponse} Send content (36442 o)

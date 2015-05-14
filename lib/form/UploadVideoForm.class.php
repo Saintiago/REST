@@ -18,7 +18,22 @@
             
             $this->setValidators(array(
                 "name" => new sfValidatorString(array("required" => true)),
-                "file" => new sfValidatorFile(array("required" => true))
+                "file" => new sfValidatorFile(
+                    array(
+                        "required" => true, 
+                        "mime_types" => 
+                            array(
+                                "video/mpeg",
+                                "video/mp4",
+                                "video/ogg",
+                                "video/quicktime",
+                                "video/webm",
+                                "video/x-ms-wmv",
+                                "video/x-flv",
+                                "video/x-msvideo"
+                            )
+                    )
+                )
             ));
             
             $this->addCSRFProtection();
@@ -42,10 +57,8 @@
              * 4. save to db
              * parent::doSave($con);
              */
-             
             $fileName = $this->moveUploadedFile($this->getValue("file"));
             $userID = $this->getUserId();
-            
             $this->prepareVideoInfo($fileName, $userID);
             
             parent::doSave($con);
@@ -56,9 +69,6 @@
             //
         }
 
-        /**
-         * @return array
-         */
         private function prepareVideoInfo($fileName, $userID)
         {
             /** @var array $info */
@@ -82,10 +92,9 @@
         
         private function moveUploadedFile($sfValidatedFile)
         {
-            // @TODO generate filename: <id>.<extension>
-            $filename = $sfValidatedFile->getOriginalName();
-            return $sfValidatedFile->save(sfConfig::get('app_video_path') . $filename);
+            $videoPath = sfConfig::get('app_video_path');
+            $fileName = $videoPath . $sfValidatedFile->generateFilename();
+            return $sfValidatedFile->save($fileName);
         }
-
     }
 

@@ -4,37 +4,15 @@
     {
         public static function getVideoInfo($file)
         {
+            $output = shell_exec(sfConfig::get('app_ffmpeg_path') . 'ffprobe.exe -v quiet -print_format json -show_format -show_streams ' . $file . ' 2>&1');
+            $parsed = json_decode($output, true);
             $info = array(
-                "width" => getFileWidth($file),
-                "height" => getFileHeight($file),
-                "audio_bitrate" => getFileAudioBitrate($file),
-                "video_bitrate" => getFileVideoBitrate($file),
+                "width" => $parsed["streams"][0]["width"],
+                "height" => $parsed["streams"][0]["height"],
+                "audio_bitrate" => $parsed["streams"][1]["bit_rate"],
+                "video_bitrate" => $parsed["format"]["bit_rate"]
             );
             return $info;
-        }
-        
-        private static function getVideoWidth($file)
-        {
-            // @TODO return video width
-            return "640";    
-        }
-        
-        private static function getVideoHeight($file)
-        {
-            // @TODO return video height
-            return "480";    
-        }
-        
-        private static function getVideoAudioBitrate($file)
-        {
-            // @TODO return audio bitrate
-            return "1024";    
-        }
-        
-        private static function getVideoVideoBitrate($file)
-        {
-            // @TODO return video bitrate
-            return "2048";    
         }
         
     } // Utils
