@@ -5,3 +5,5 @@
 all:
   video_path: %SF_UPLOAD_DIR%/video/
   ffmpeg_path: d:\ffmpeg\bin\
+  mess_auth_required: Authentification required
+  mess_denied: Access denied

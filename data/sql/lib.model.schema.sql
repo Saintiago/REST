@@ -4,23 +4,6 @@
 SET FOREIGN_KEY_CHECKS = 0;
 
 #-----------------------------------------------------------------------------
-#-- users
-#-----------------------------------------------------------------------------
-
-DROP TABLE IF EXISTS `users`;
-
-
-CREATE TABLE `users`
-(
-	`id` INTEGER  NOT NULL AUTO_INCREMENT,
-	`login` VARCHAR(255)  NOT NULL,
-	`password` VARCHAR(255)  NOT NULL,
-	`created_at` DATETIME,
-	`updated_at` DATETIME,
-	PRIMARY KEY (`id`)
-)Engine=InnoDB;
-
-#-----------------------------------------------------------------------------
 #-- video
 #-----------------------------------------------------------------------------
 
@@ -39,11 +22,7 @@ CREATE TABLE `video`
 	`filename` VARCHAR(255),
 	`created_at` DATETIME,
 	`updated_at` DATETIME,
-	PRIMARY KEY (`id`),
-	INDEX `video_FI_1` (`user_id`),
-	CONSTRAINT `video_FK_1`
-		FOREIGN KEY (`user_id`)
-		REFERENCES `users` (`id`)
+	PRIMARY KEY (`id`)
 )Engine=InnoDB;
 
 # This restores the fkey checks, after having unset them earlier

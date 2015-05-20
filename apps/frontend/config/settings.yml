@@ -24,6 +24,7 @@ test:
 
 all:
   .settings:
+    enabled_modules:      [default, sfGuardAuth]
     # Form security secret (CSRF protection)
     csrf_secret:            d35d6e8270f63ac842d681756e1b798ac5585ea4
 
@@ -33,3 +34,9 @@ all:
 
     # Enable the database manager
     use_database:           true
+    
+    login_module:           sfGuardAuth
+    login_action:           signin
+     
+    secure_module:          sfGuardAuth
+    secure_action:          secure

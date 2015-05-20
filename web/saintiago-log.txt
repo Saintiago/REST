@@ -225,3 +225,105 @@ operable program or batch file.
 14.05.2015 11:26:49 -- $filePath: 'D:\\my_projects\\rest.local\\web\\uploads/video/lexa.avi'
 14.05.2015 11:28:20 -- $fileMime: 'video/x-msvideo'
 14.05.2015 11:59:23 -- $fileName: 'D:\\my_projects\\rest.local\\web\\uploads/video/D:\\my_projects\\rest.local\\web\\uploads\\video\\vidEA27.tmp.avi'
+19.05.2015 19:27:07 -- $_SERVER[PHP_AUTH_USER]: 'wqe'
+19.05.2015 19:27:07 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:27:07 -- $_SERVER: array (
+  'HTTP_HOST' => 'rest.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'CONTENT_TYPE' => 'text/plain',
+  'HTTP_COOKIE' => 'symfony=uadvc5gpc9o7u3q1tjmi7arud1',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'HTTP_PRAGMA' => 'no-cache',
+  'HTTP_CACHE_CONTROL' => 'no-cache',
+  'CONTENT_LENGTH' => '0',
+  'PATH' => 'C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\Program Files\\nodejs\\;',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win64) PHP/5.5.12 Server at rest.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win64) PHP/5.5.12',
+  'SERVER_NAME' => 'rest.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/my_projects/rest.local/web',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/my_projects/rest.local/web',
+  'SERVER_ADMIN' => 'webmaster@blog.local',
+  'SCRIPT_FILENAME' => 'D:/my_projects/rest.local/web/frontend_dev.php',
+  'REMOTE_PORT' => '63496',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'POST',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/frontend_dev.php/video/info/1',
+  'SCRIPT_NAME' => '/frontend_dev.php',
+  'PATH_INFO' => '/video/info/1',
+  'PATH_TRANSLATED' => 'D:\\my_projects\\rest.local\\web\\video\\info\\1',
+  'PHP_SELF' => '/frontend_dev.php/video/info/1',
+  'PHP_AUTH_USER' => 'wqe',
+  'PHP_AUTH_PW' => '',
+  'REQUEST_TIME_FLOAT' => 1432056427.529,
+  'REQUEST_TIME' => 1432056427,
+)
+19.05.2015 19:29:22 -- $_SERVER[PHP_AUTH_USER]: 'wqe'
+19.05.2015 19:29:22 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:30:01 -- $_SERVER[PHP_AUTH_USER]: 'wqe'
+19.05.2015 19:30:01 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:30:33 -- $_SERVER[PHP_AUTH_USER]: 'wqe'
+19.05.2015 19:30:33 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:35:52 -- $_SERVER[PHP_AUTH_USER]: 'wqe'
+19.05.2015 19:35:52 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:36:06 -- $_SERVER[PHP_AUTH_USER]: 'wqe'
+19.05.2015 19:36:06 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:36:13 -- $_SERVER[PHP_AUTH_USER]: ''
+19.05.2015 19:36:13 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:36:14 -- $_SERVER[PHP_AUTH_USER]: ''
+19.05.2015 19:36:14 -- $_SERVER[PHP_AUTH_PW]: ''
+19.05.2015 19:37:49 -- $_SERVER[PHP_AUTH_USER]: 'user'
+19.05.2015 19:37:49 -- $_SERVER[PHP_AUTH_PW]: 'password'
+19.05.2015 19:39:42 -- $_SERVER[PHP_AUTH_USER]: 'admin'
+19.05.2015 19:39:42 -- $_SERVER[PHP_AUTH_PW]: 'qwerty'
+19.05.2015 19:41:01 -- $_SERVER[PHP_AUTH_USER]: 'admin'
+19.05.2015 19:41:01 -- $_SERVER[PHP_AUTH_PW]: 'qwerty'
+19.05.2015 19:44:22 -- $_SERVER[PHP_AUTH_USER]: 'admin'
+19.05.2015 19:44:22 -- $_SERVER[PHP_AUTH_PW]: 'qwerty'
+20.05.2015 10:18:47 -- $_SERVER[PHP_AUTH_USER]: 'admin'
+20.05.2015 10:18:47 -- $_SERVER[PHP_AUTH_PW]: 'qwerty'
+20.05.2015 11:05:49 -- $authResult: NULL
+20.05.2015 11:06:24 -- $authResult: array (
+  'result' => false,
+  'message' => 'Authentification required',
+)
+20.05.2015 11:06:50 -- $authResult: array (
+  'result' => false,
+  'message' => 'Authentification required',
+)
+20.05.2015 11:07:11 -- $authResult: array (
+  'result' => true,
+  'message' => '123',
+)
+20.05.2015 11:32:56 -- $video->getUserID(): 2
+20.05.2015 11:34:49 -- $video->getUserID(): 2
+20.05.2015 11:34:49 -- $user->getGuardUser()->getId(): 1
+20.05.2015 11:52:28 -- $server[PHP_AUTH_USER]: 'admin'
+20.05.2015 11:52:28 -- $server[PHP_AUTH_PW]: 'qwerty'
+20.05.2015 12:03:59 -- Конструктор класса SubClass
+20.05.2015 12:19:26 -- Конструктор класса SubClass
+20.05.2015 12:19:32 -- Конструктор класса SubClass
+20.05.2015 12:43:01 -- deleted
+20.05.2015 12:46:35 -- deleted
+20.05.2015 12:50:02 -- deleted
+20.05.2015 14:51:39 -- $userId: 2
+20.05.2015 14:53:57 -- $authResult: array (
+  'result' => true,
+  'message' => '',
+)
+20.05.2015 14:54:29 -- $cur_user: 1
+20.05.2015 15:03:37 -- $userId: 2
