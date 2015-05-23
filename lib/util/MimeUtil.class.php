@@ -11,9 +11,12 @@
         const FLV = "video/x-flv";
         const AVI = "video/x-msvideo";
         
-        private function getVideoMimes()
+        const FLV_EXT = 'flv';
+        const MP4_EXT = 'mp4';
+        
+        public static function getVideoMimes()
         {
-            return array(MPEG, MP4, OGG, MOV, WEBM, WMV, FLV, AVI);
+            return array(self::MPEG, self::MP4, self::OGG, self::MOV, self::WEBM, self::WMV, self::FLV, self::AVI);
         }
-
+        
     } // Utils

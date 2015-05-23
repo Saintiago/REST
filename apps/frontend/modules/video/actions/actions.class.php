@@ -70,25 +70,28 @@
 
                 if ($this->processForm($request, $this->form))
                 {
-                    $this->getResponse()->setStatusCode('200');
+                     $file = $this->form->getValue("file");
+                    if (MimeUtil::FLV == $file->getType())
+                    {
+                        $videoObj = $this->form->getObject();
+                        QueuePeer::addToConvertQueue($videoObj);
+                    }
+                    $this->getResponse()->setStatusCode('201');
                     return sfView::NONE;
                 }
                 else
                 {
                     $message = $this->form->getErrorSchema();
-                    echo $message;
-                    die();
+                    $this->getResponse()->setStatusCode('500');
+                    return $this->renderText($message);
                 }
             }
-            else
-            {
-                $header_message = "Basic realm=\"$message\"";
+            $header_message = "Basic realm=\"$message\"";
 
-                $this->getResponse()->setStatusCode('401');
-                $this->getResponse()->setHttpHeader('WWW_Authenticate', $header_message);
+            $this->getResponse()->setStatusCode('401');
+            $this->getResponse()->setHttpHeader('WWW_Authenticate', $header_message);
 
-                return sfView::NONE;
-            }
+            return sfView::NONE;
 
         }
 
@@ -113,29 +116,39 @@
                     $video = VideoPeer::retrieveByPk($request->getParameter('id')), 
                     sprintf('Object video does not exist (%s).', $request->getParameter('id'))
                 );
-                $this->form = new UploadVideoForm($video);
+                 $video_owner = $video->getUserID();
+                 $cur_user = $user->getGuardUser()->getId();
 
-                if ($this->processForm($request, $this->form))
+                if ($cur_user == $video_owner)
                 {
-                    $this->getResponse()->setStatusCode('200');
-                    return sfView::NONE;
-                }
-                else
-                {
-                    $message = $this->form->getErrorSchema();
-                    echo $message;
-                    die();
+                    $this->form = new UploadVideoForm($video, array('user_id' => $cur_user));
+
+                    if ($this->processForm($request, $this->form))
+                    {
+                        $file = $this->form->getValue("file");
+                        if (MimeUtil::FLV == $file->getType())
+                        {
+                            $videoObj = $this->form->getObject();
+                            QueuePeer::addToConvertQueue($videoObj);
+                        }
+                        $this->getResponse()->setStatusCode('202');
+                        return sfView::NONE;
+                    }
+                    else
+                    {
+                        $message = $this->form->getErrorSchema();
+                        $this->getResponse()->setStatusCode('500');
+                        return $this->renderText($message);
+                    }
                 }
             }
-            else
-            {
-                $header_message = "Basic realm=\"$message\"";
 
-                $this->getResponse()->setStatusCode('401');
-                $this->getResponse()->setHttpHeader('WWW_Authenticate', $header_message);
+            $header_message = "Basic realm=\"$message\"";
 
-                return sfView::NONE;
-            }
+            $this->getResponse()->setStatusCode('401');
+            $this->getResponse()->setHttpHeader('WWW_Authenticate', $header_message);
+
+            return sfView::NONE;
         }
 
         public function executeDelete(sfWebRequest $request)

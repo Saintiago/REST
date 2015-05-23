@@ -35,38 +35,34 @@
         
         protected function doSave($con = null)
         {
-            $fileName = $this->moveUploadedFile($this->getValue("file"));
+            $filePath = $this->moveUploadedFile($this->getValue("file"));
+            
             $userId = $this->getOption('user_id');
-            $this->prepareVideoInfo($fileName, $userId);
+            $this->prepareVideoInfo($filePath, $userId);
             
             parent::doSave($con);
         }
         
-        private function moveUploadedFile($sfValidatedFile)
+        private function moveUploadedFile(sfValidatedFile $sfValidatedFile)
         {
             $videoPath = sfConfig::get('app_video_path');
             $fileName = $videoPath . $sfValidatedFile->generateFilename();
             return $sfValidatedFile->save($fileName);
         }
         
-        private function prepareVideoInfo($fileName, $userId)
+        private function prepareVideoInfo($filePath, $userId)
         {
             /** @var array $info */
             $info = FfmpegUtil::getVideoInfo($this->getValue("file"));
 
             $object = $this->getObject();
             $object->setName($this->getValue("name"));
-            $object->setFilename($fileName);
+            $object->setFilename($filePath);
             $object->setWidth($info['width']);
             $object->setHeight($info['height']);
             $object->setAudioBitrate($info['audio_bitrate']);
             $object->setVideoBitrate($info['video_bitrate']);
             $object->setUserId($userId);
-        }
-        
-        private function convertFlvToMp4()
-        {
-            //
         }
         
     }

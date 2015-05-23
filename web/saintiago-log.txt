@@ -327,3 +327,8 @@ operable program or batch file.
 )
 20.05.2015 14:54:29 -- $cur_user: 1
 20.05.2015 15:03:37 -- $userId: 2
+21.05.2015 18:39:37 -- $file->getType(): 'video/x-msvideo'
+21.05.2015 18:40:08 -- $file->getType(): 'video/x-msvideo'
+21.05.2015 18:42:11 -- $file->getType(): 'video/x-msvideo'
+21.05.2015 18:51:20 -- $file->getType(): 'video/x-flv'
+21.05.2015 19:12:12 -- FfmpegUtil 21.05.2015 19:17:09 -- FfmpegUtil 21.05.2015 19:18:04 -- FfmpegUtil 21.05.2015 19:18:26 -- FfmpegUtil 

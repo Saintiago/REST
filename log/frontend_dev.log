@@ -9924,3 +9924,786 @@ May 20 15:03:37 symfony [info] {sfWebDebugLogger} Factories 31.42 ms (1)
 May 20 15:03:37 symfony [info] {sfWebDebugLogger} Action "video/post" 313.84 ms (1)
 May 20 15:03:37 symfony [info] {sfWebDebugLogger} View "None" for "video/post" 0.02 ms (1)
 May 20 15:03:37 symfony [info] {sfWebResponse} Send content (28212 o)
+May 21 17:10:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 17:10:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 17:10:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 17:10:08 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/1 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '1',)
+May 21 17:10:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 17:10:08 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 17:10:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 17:10:08 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 17:10:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 17:10:08 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="Authentification required""
+May 21 17:10:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 17:10:08 symfony [info] {sfWebDebugLogger} Configuration 8.10 ms (8)
+May 21 17:10:08 symfony [info] {sfWebDebugLogger} Factories 357.72 ms (1)
+May 21 17:10:08 symfony [info] {sfWebDebugLogger} Action "video/info" 0.41 ms (1)
+May 21 17:10:08 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 17:10:08 symfony [info] {sfWebResponse} Send content (18527 o)
+May 21 17:10:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 17:10:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 17:10:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 17:10:15 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/1 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '1',)
+May 21 17:10:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 17:10:15 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 17:10:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 17:10:15 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 17:10:15 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 17:10:15 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.USERNAME='admin' AND sf_guard_user.IS_ACTIVE=1 LIMIT 1
+May 21 17:10:17 symfony [info] {myUser} User is authenticated
+May 21 17:10:17 symfony [debug] {sfPropelLogger} time:  0.018 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT sf_guard_user_permission.USER_ID, sf_guard_user_permission.PERMISSION_ID, sf_guard_permission.ID, sf_guard_permission.NAME, sf_guard_permission.DESCRIPTION FROM `sf_guard_user_permission` LEFT JOIN sf_guard_permission ON (sf_guard_user_permission.PERMISSION_ID=sf_guard_permission.ID) WHERE sf_guard_user_permission.USER_ID=1
+May 21 17:10:17 symfony [debug] {sfPropelLogger} time:  0.019 sec | slow:  NO | mem:    9.5 MB | mempeak:    9.5 MB | memdelta:      0.0 B | SELECT sf_guard_user_group.USER_ID, sf_guard_user_group.GROUP_ID, sf_guard_group.ID, sf_guard_group.NAME, sf_guard_group.DESCRIPTION FROM `sf_guard_user_group` LEFT JOIN sf_guard_group ON (sf_guard_user_group.GROUP_ID=sf_guard_group.ID) WHERE sf_guard_user_group.USER_ID=1
+May 21 17:10:17 symfony [info] {myUser} Add credential(s) ""
+May 21 17:10:17 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.5 MB | mempeak:    9.5 MB | memdelta:      0.0 B | UPDATE sf_guard_user SET `LAST_LOGIN`='2015-05-21 17:10:17' WHERE sf_guard_user.ID=1
+May 21 17:10:17 symfony [debug] {sfPropelLogger} time:  0.011 sec | slow:  NO | mem:    9.8 MB | mempeak:    9.8 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 17:10:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 21 17:10:17 symfony [info] {sfWebResponse} Send header "Content-Type: application/json"
+May 21 17:10:17 symfony [info] {sfWebDebugLogger} Configuration 1197.56 ms (10)
+May 21 17:10:17 symfony [info] {sfWebDebugLogger} Factories 28.83 ms (1)
+May 21 17:10:17 symfony [info] {sfWebDebugLogger} Action "video/info" 1705.45 ms (1)
+May 21 17:10:17 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 17:10:17 symfony [info] {sfWebResponse} Send content (94 o)
+May 21 18:24:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:24:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:24:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:24:28 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/1 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '1',)
+May 21 18:24:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:24:28 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:24:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:24:28 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 18:24:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:24:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.USERNAME='admin' AND sf_guard_user.IS_ACTIVE=1 LIMIT 1
+May 21 18:24:28 symfony [info] {myUser} User is authenticated
+May 21 18:24:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.3 MB | mempeak:    9.3 MB | memdelta:      0.0 B | SELECT sf_guard_user_permission.USER_ID, sf_guard_user_permission.PERMISSION_ID, sf_guard_permission.ID, sf_guard_permission.NAME, sf_guard_permission.DESCRIPTION FROM `sf_guard_user_permission` LEFT JOIN sf_guard_permission ON (sf_guard_user_permission.PERMISSION_ID=sf_guard_permission.ID) WHERE sf_guard_user_permission.USER_ID=1
+May 21 18:24:28 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   10.0 MB | mempeak:   10.0 MB | memdelta:      0.0 B | SELECT sf_guard_user_group.USER_ID, sf_guard_user_group.GROUP_ID, sf_guard_group.ID, sf_guard_group.NAME, sf_guard_group.DESCRIPTION FROM `sf_guard_user_group` LEFT JOIN sf_guard_group ON (sf_guard_user_group.GROUP_ID=sf_guard_group.ID) WHERE sf_guard_user_group.USER_ID=1
+May 21 18:24:28 symfony [info] {myUser} Add credential(s) ""
+May 21 18:24:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   10.0 MB | mempeak:   10.0 MB | memdelta:      0.0 B | UPDATE sf_guard_user SET `LAST_LOGIN`='2015-05-21 18:24:28' WHERE sf_guard_user.ID=1
+May 21 18:24:28 symfony [debug] {sfPropelLogger} time:  0.002 sec | slow:  NO | mem:   10.3 MB | mempeak:   10.3 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 18:24:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 18:24:28 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="Access denied""
+May 21 18:24:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:24:28 symfony [info] {sfWebDebugLogger} Configuration 512.94 ms (9)
+May 21 18:24:28 symfony [info] {sfWebDebugLogger} Factories 209.23 ms (1)
+May 21 18:24:28 symfony [info] {sfWebDebugLogger} Action "video/info" 250.54 ms (1)
+May 21 18:24:28 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 18:24:28 symfony [info] {sfWebResponse} Send content (27890 o)
+May 21 18:25:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:25:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:25:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:25:12 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/1 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '1',)
+May 21 18:25:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:25:12 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:25:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:25:12 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 18:25:12 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:25:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 18:25:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 18:25:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 18:25:12 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="Access denied""
+May 21 18:25:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:25:12 symfony [info] {sfWebDebugLogger} Configuration 8.68 ms (8)
+May 21 18:25:12 symfony [info] {sfWebDebugLogger} Factories 34.36 ms (1)
+May 21 18:25:12 symfony [info] {sfWebDebugLogger} Action "video/info" 31.05 ms (1)
+May 21 18:25:12 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 18:25:12 symfony [info] {sfWebResponse} Send content (23052 o)
+May 21 18:25:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:25:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:25:51 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:25:51 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/1 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '1',)
+May 21 18:25:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:25:51 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:25:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:25:51 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 18:25:51 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:25:51 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 18:25:51 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 18:25:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 18:25:51 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="Access denied""
+May 21 18:25:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:25:51 symfony [info] {sfWebDebugLogger} Configuration 7.27 ms (8)
+May 21 18:25:51 symfony [info] {sfWebDebugLogger} Factories 29.94 ms (1)
+May 21 18:25:51 symfony [info] {sfWebDebugLogger} Action "video/info" 28.91 ms (1)
+May 21 18:25:51 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 18:25:51 symfony [info] {sfWebResponse} Send content (23063 o)
+May 21 18:25:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:25:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:25:56 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:25:56 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/1 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '1',)
+May 21 18:25:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:25:56 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:25:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:25:56 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 18:25:56 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:25:56 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 18:25:56 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 18:25:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 18:25:56 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="Access denied""
+May 21 18:25:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:25:56 symfony [info] {sfWebDebugLogger} Configuration 8.33 ms (8)
+May 21 18:25:56 symfony [info] {sfWebDebugLogger} Factories 30.05 ms (1)
+May 21 18:25:56 symfony [info] {sfWebDebugLogger} Action "video/info" 28.80 ms (1)
+May 21 18:25:56 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 18:25:56 symfony [info] {sfWebResponse} Send content (23063 o)
+May 21 18:26:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:26:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:26:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:26:08 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/1 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '1',)
+May 21 18:26:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:26:08 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:26:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:26:08 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 18:26:08 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:26:08 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 18:26:08 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 18:26:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 18:26:08 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="Access denied""
+May 21 18:26:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:26:08 symfony [info] {sfWebDebugLogger} Configuration 7.39 ms (8)
+May 21 18:26:08 symfony [info] {sfWebDebugLogger} Factories 30.21 ms (1)
+May 21 18:26:08 symfony [info] {sfWebDebugLogger} Action "video/info" 28.25 ms (1)
+May 21 18:26:08 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 18:26:08 symfony [info] {sfWebResponse} Send content (23063 o)
+May 21 18:26:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:26:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:26:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:26:19 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/2 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '2',)
+May 21 18:26:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:26:19 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:26:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:26:19 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 18:26:19 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:26:19 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='2'
+May 21 18:26:19 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 18:26:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 18:26:19 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="Access denied""
+May 21 18:26:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:26:19 symfony [info] {sfWebDebugLogger} Configuration 7.80 ms (8)
+May 21 18:26:19 symfony [info] {sfWebDebugLogger} Factories 35.81 ms (1)
+May 21 18:26:19 symfony [info] {sfWebDebugLogger} Action "video/info" 29.73 ms (1)
+May 21 18:26:19 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 18:26:19 symfony [info] {sfWebResponse} Send content (23063 o)
+May 21 18:26:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:26:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:26:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:26:26 symfony [info] {sfPatternRouting} Match route "video_info" (/video/info/:id) for /video/info/3 with parameters array (  'module' => 'video',  'action' => 'info',  'id' => '3',)
+May 21 18:26:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:26:27 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:26:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:26:27 symfony [info] {videoActions} Call "videoActions->executeInfo()"
+May 21 18:26:27 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:26:27 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:26:27 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 18:26:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 21 18:26:27 symfony [info] {sfWebResponse} Send header "Content-Type: application/json"
+May 21 18:26:27 symfony [info] {sfWebDebugLogger} Configuration 10.58 ms (8)
+May 21 18:26:27 symfony [info] {sfWebDebugLogger} Factories 32.32 ms (1)
+May 21 18:26:27 symfony [info] {sfWebDebugLogger} Action "video/info" 29.81 ms (1)
+May 21 18:26:27 symfony [info] {sfWebDebugLogger} View "None" for "video/info" 0.02 ms (1)
+May 21 18:26:27 symfony [info] {sfWebResponse} Send content (89 o)
+May 21 18:30:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:30:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:30:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:30:46 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:30:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:30:46 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:30:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:30:46 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:30:46 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:30:46 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:32:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:32:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:32:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:32:16 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:32:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:32:16 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:32:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:32:16 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:32:16 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:32:16 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant MPEG - assumed 'MPEG')
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant MP4 - assumed 'MP4')
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant OGG - assumed 'OGG')
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant MOV - assumed 'MOV')
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant WEBM - assumed 'WEBM')
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant WMV - assumed 'WMV')
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant FLV - assumed 'FLV')
+May 21 18:32:16 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\MimeUtil.class.php on line 16 (Use of undefined constant AVI - assumed 'AVI')
+May 21 18:33:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:33:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:33:15 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:33:15 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:33:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:33:15 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:33:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:33:15 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:33:15 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:33:15 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:34:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:34:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:34:49 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:34:49 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:34:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:34:49 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:34:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:34:49 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:34:49 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:34:49 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:36:07 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:36:07 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:36:07 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:36:07 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:36:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:36:07 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:36:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:36:07 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:36:07 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:36:07 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:36:34 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:36:34 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:36:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:36:34 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:36:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:36:34 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:36:34 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:36:34 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:38:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:38:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:38:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:38:01 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:38:01 symfony [info] {myUser} Automatic user logout due to timeout
+May 21 18:38:01 symfony [info] {myUser} User is not authenticated
+May 21 18:38:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:38:01 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:38:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:38:01 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:38:02 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:38:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.3 MB | mempeak:    8.3 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.USERNAME='admin' AND sf_guard_user.IS_ACTIVE=1 LIMIT 1
+May 21 18:38:02 symfony [info] {myUser} User is authenticated
+May 21 18:38:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   10.5 MB | mempeak:   10.5 MB | memdelta:      0.0 B | SELECT sf_guard_user_permission.USER_ID, sf_guard_user_permission.PERMISSION_ID, sf_guard_permission.ID, sf_guard_permission.NAME, sf_guard_permission.DESCRIPTION FROM `sf_guard_user_permission` LEFT JOIN sf_guard_permission ON (sf_guard_user_permission.PERMISSION_ID=sf_guard_permission.ID) WHERE sf_guard_user_permission.USER_ID=1
+May 21 18:38:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   11.0 MB | mempeak:   11.0 MB | memdelta:      0.0 B | SELECT sf_guard_user_group.USER_ID, sf_guard_user_group.GROUP_ID, sf_guard_group.ID, sf_guard_group.NAME, sf_guard_group.DESCRIPTION FROM `sf_guard_user_group` LEFT JOIN sf_guard_group ON (sf_guard_user_group.GROUP_ID=sf_guard_group.ID) WHERE sf_guard_user_group.USER_ID=1
+May 21 18:38:02 symfony [info] {myUser} Add credential(s) ""
+May 21 18:38:02 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:   11.0 MB | mempeak:   11.0 MB | memdelta:      0.0 B | UPDATE sf_guard_user SET `LAST_LOGIN`='2015-05-21 18:38:02' WHERE sf_guard_user.ID=1
+May 21 18:38:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   11.3 MB | mempeak:   11.3 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:39:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:39:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:39:21 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:39:21 symfony [info] {sfPatternRouting} Match route "video_edit" (/video/edit/:id) for /video/edit/3 with parameters array (  'module' => 'video',  'action' => 'edit',  'id' => '3',)
+May 21 18:39:21 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:39:21 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:39:21 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:39:21 symfony [info] {videoActions} Call "videoActions->executeEdit()"
+May 21 18:39:21 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:39:21 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:39:21 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 21 18:39:21 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 21 18:39:21 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 18:39:21 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 18:39:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 21 18:39:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:39:21 symfony [info] {sfWebDebugLogger} Configuration 30.26 ms (10)
+May 21 18:39:21 symfony [info] {sfWebDebugLogger} Factories 31.54 ms (1)
+May 21 18:39:21 symfony [info] {sfWebDebugLogger} Action "video/edit" 32.15 ms (1)
+May 21 18:39:21 symfony [info] {sfWebDebugLogger} View "Success" for "video/edit" 205.48 ms (1)
+May 21 18:39:21 symfony [info] {sfWebDebugLogger} Partial "video/_form" 62.57 ms (1)
+May 21 18:39:21 symfony [info] {sfWebResponse} Send content (36378 o)
+May 21 18:39:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:39:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:39:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:39:37 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:39:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:39:37 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:39:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:39:37 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:39:37 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:39:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:39:37 symfony [notice] {sfWebDebugLogger}  Notice at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php on line 9 (Use of undefined constant INFO_QUERY - assumed 'INFO_QUERY')
+May 21 18:39:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='SomeEdit', `WIDTH`=NULL, `HEIGHT`=NULL, `VIDEO_BITRATE`=NULL, `AUDIO_BITRATE`=NULL, `USER_ID`=NULL, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/7c3aa7355576b688705434befa29001da3917e3e.avi', `UPDATED_AT`='2015-05-21 18:39:37' WHERE video.ID=3
+May 21 18:39:37 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php:9))
+May 21 18:39:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 202 Accepted"
+May 21 18:39:37 symfony [warning] {sfWebDebugLogger}  Warning at D:\my_projects\rest.local\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at D:\my_projects\rest.local\lib\util\ffmpegUtil.class.php:9))
+May 21 18:39:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:39:37 symfony [info] {sfWebDebugLogger} Configuration 6.99 ms (8)
+May 21 18:39:37 symfony [info] {sfWebDebugLogger} Factories 29.83 ms (1)
+May 21 18:39:37 symfony [info] {sfWebDebugLogger} Action "video/put" 240.95 ms (1)
+May 21 18:39:37 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 18:39:37 symfony [info] {sfWebResponse} Send content (22898 o)
+May 21 18:40:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:40:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:40:08 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:40:08 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:40:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:40:08 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:40:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:40:08 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:40:08 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:40:08 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:40:08 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `WIDTH`=320, `HEIGHT`=240, `VIDEO_BITRATE`=559822, `AUDIO_BITRATE`=20000, `USER_ID`=NULL, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/d8183f834d2af258161acc57fe8a938a23f96050.avi', `UPDATED_AT`='2015-05-21 18:40:08' WHERE video.ID=3
+May 21 18:40:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 202 Accepted"
+May 21 18:40:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:40:08 symfony [info] {sfWebDebugLogger} Configuration 5.91 ms (8)
+May 21 18:40:08 symfony [info] {sfWebDebugLogger} Factories 29.46 ms (1)
+May 21 18:40:08 symfony [info] {sfWebDebugLogger} Action "video/put" 143.80 ms (1)
+May 21 18:40:08 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.06 ms (1)
+May 21 18:40:08 symfony [info] {sfWebResponse} Send content (22875 o)
+May 21 18:40:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:40:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:40:42 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:40:42 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:40:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:40:42 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:40:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:40:42 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:40:42 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:40:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:41:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:41:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:41:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:41:28 symfony [info] {sfPatternRouting} Match route "video_edit" (/video/edit/:id) for /video/edit/3 with parameters array (  'module' => 'video',  'action' => 'edit',  'id' => '3',)
+May 21 18:41:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:41:28 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:41:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:41:28 symfony [info] {videoActions} Call "videoActions->executeEdit()"
+May 21 18:41:28 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:41:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:41:28 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 21 18:41:28 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 21 18:41:28 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 18:41:28 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 18:41:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 21 18:41:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:41:28 symfony [info] {sfWebDebugLogger} Configuration 7.07 ms (9)
+May 21 18:41:28 symfony [info] {sfWebDebugLogger} Factories 30.03 ms (1)
+May 21 18:41:28 symfony [info] {sfWebDebugLogger} Action "video/edit" 32.68 ms (1)
+May 21 18:41:28 symfony [info] {sfWebDebugLogger} View "Success" for "video/edit" 23.23 ms (1)
+May 21 18:41:28 symfony [info] {sfWebDebugLogger} Partial "video/_form" 6.98 ms (1)
+May 21 18:41:28 symfony [info] {sfWebResponse} Send content (36372 o)
+May 21 18:42:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:42:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:42:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:42:11 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 18:42:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:42:11 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:42:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:42:11 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:42:11 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:42:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 18:42:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='12312312', `USER_ID`=NULL, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/b982c6203825dbf0ac1f4e33a8ac1d3eb9569bff.avi', `UPDATED_AT`='2015-05-21 18:42:11' WHERE video.ID=3
+May 21 18:42:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 202 Accepted"
+May 21 18:42:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:42:11 symfony [info] {sfWebDebugLogger} Configuration 7.78 ms (8)
+May 21 18:42:11 symfony [info] {sfWebDebugLogger} Factories 32.89 ms (1)
+May 21 18:42:11 symfony [info] {sfWebDebugLogger} Action "video/put" 146.64 ms (1)
+May 21 18:42:11 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 18:42:11 symfony [info] {sfWebResponse} Send content (22778 o)
+May 21 18:51:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:51:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:51:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:51:20 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/1 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '1',)
+May 21 18:51:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:51:20 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:51:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:51:20 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:51:20 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:51:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 18:51:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.3 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='Kirpich', `VIDEO_BITRATE`=356551, `AUDIO_BITRATE`=55950, `USER_ID`=NULL, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/bccf454cb61a3eccc2779bb0c3123dc74628ef2a.flv', `UPDATED_AT`='2015-05-21 18:51:20' WHERE video.ID=1
+May 21 18:51:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 202 Accepted"
+May 21 18:51:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:51:20 symfony [info] {sfWebDebugLogger} Configuration 6.88 ms (8)
+May 21 18:51:20 symfony [info] {sfWebDebugLogger} Factories 30.75 ms (1)
+May 21 18:51:20 symfony [info] {sfWebDebugLogger} Action "video/put" 289.59 ms (1)
+May 21 18:51:20 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 18:51:20 symfony [info] {sfWebResponse} Send content (22861 o)
+May 21 18:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 18:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 18:54:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 18:54:09 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/1 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '1',)
+May 21 18:54:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 18:54:09 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 18:54:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 18:54:09 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 18:54:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 18:54:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 18:54:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 18:54:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | UPDATE video SET `USER_ID`=1, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/5a963a27385b2b4a68878e8475ccc7ae14c60d50.flv', `UPDATED_AT`='2015-05-21 18:54:09' WHERE video.ID=1
+May 21 18:54:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 202 Accepted"
+May 21 18:54:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 18:54:09 symfony [info] {sfWebDebugLogger} Configuration 7.73 ms (8)
+May 21 18:54:09 symfony [info] {sfWebDebugLogger} Factories 31.97 ms (1)
+May 21 18:54:09 symfony [info] {sfWebDebugLogger} Action "video/put" 149.16 ms (1)
+May 21 18:54:09 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 18:54:09 symfony [info] {sfWebResponse} Send content (24127 o)
+May 21 19:08:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:08:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:08:05 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:08:05 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/1 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '1',)
+May 21 19:08:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:08:05 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:08:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:08:05 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:08:05 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:08:05 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 19:08:05 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:08:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:08:05 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:08:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:08:05 symfony [info] {sfWebDebugLogger} Configuration 8.38 ms (8)
+May 21 19:08:05 symfony [info] {sfWebDebugLogger} Factories 31.38 ms (1)
+May 21 19:08:05 symfony [info] {sfWebDebugLogger} Action "video/put" 31.48 ms (1)
+May 21 19:08:05 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:08:05 symfony [info] {sfWebResponse} Send content (23300 o)
+May 21 19:08:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:08:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:08:38 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:08:38 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/1 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '1',)
+May 21 19:08:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:08:38 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:08:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:08:38 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:08:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:08:38 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='1'
+May 21 19:08:38 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:08:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:08:39 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:08:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:08:39 symfony [info] {sfWebDebugLogger} Configuration 6.77 ms (8)
+May 21 19:08:39 symfony [info] {sfWebDebugLogger} Factories 29.53 ms (1)
+May 21 19:08:39 symfony [info] {sfWebDebugLogger} Action "video/put" 29.31 ms (1)
+May 21 19:08:39 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:08:39 symfony [info] {sfWebResponse} Send content (23300 o)
+May 21 19:08:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:08:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:08:50 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:08:50 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:08:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:08:50 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:08:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:08:50 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:08:50 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:08:50 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:08:50 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:08:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:08:50 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:08:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:08:50 symfony [info] {sfWebDebugLogger} Configuration 7.95 ms (8)
+May 21 19:08:50 symfony [info] {sfWebDebugLogger} Factories 33.98 ms (1)
+May 21 19:08:50 symfony [info] {sfWebDebugLogger} Action "video/put" 33.43 ms (1)
+May 21 19:08:50 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:08:50 symfony [info] {sfWebResponse} Send content (23300 o)
+May 21 19:09:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:09:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:09:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:09:52 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:09:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:09:52 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:09:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:09:52 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:09:52 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:09:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:09:52 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:09:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:09:52 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:09:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:09:52 symfony [info] {sfWebDebugLogger} Configuration 8.71 ms (8)
+May 21 19:09:52 symfony [info] {sfWebDebugLogger} Factories 29.38 ms (1)
+May 21 19:09:52 symfony [info] {sfWebDebugLogger} Action "video/put" 29.02 ms (1)
+May 21 19:09:52 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:09:52 symfony [info] {sfWebResponse} Send content (23300 o)
+May 21 19:10:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:10:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:10:01 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:10:01 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:10:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:10:01 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:10:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:10:01 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:10:01 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:10:01 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:10:01 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:10:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:10:01 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:10:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:10:01 symfony [info] {sfWebDebugLogger} Configuration 6.82 ms (8)
+May 21 19:10:01 symfony [info] {sfWebDebugLogger} Factories 31.00 ms (1)
+May 21 19:10:01 symfony [info] {sfWebDebugLogger} Action "video/put" 29.32 ms (1)
+May 21 19:10:01 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:10:01 symfony [info] {sfWebResponse} Send content (23300 o)
+May 21 19:10:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:10:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:10:12 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:10:12 symfony [info] {sfPatternRouting} Match route "video_edit" (/video/edit/:id) for /video/edit/3 with parameters array (  'module' => 'video',  'action' => 'edit',  'id' => '3',)
+May 21 19:10:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:10:12 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:10:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:10:12 symfony [info] {videoActions} Call "videoActions->executeEdit()"
+May 21 19:10:12 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:10:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:10:12 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 21 19:10:12 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 21 19:10:12 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 19:10:12 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 19:10:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 21 19:10:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:10:12 symfony [info] {sfWebDebugLogger} Configuration 8.29 ms (9)
+May 21 19:10:12 symfony [info] {sfWebDebugLogger} Factories 30.11 ms (1)
+May 21 19:10:12 symfony [info] {sfWebDebugLogger} Action "video/edit" 33.73 ms (1)
+May 21 19:10:12 symfony [info] {sfWebDebugLogger} View "Success" for "video/edit" 21.99 ms (1)
+May 21 19:10:12 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.18 ms (1)
+May 21 19:10:12 symfony [info] {sfWebResponse} Send content (36403 o)
+May 21 19:10:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:10:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:10:20 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:10:20 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:10:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:10:20 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:10:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:10:20 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:10:20 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:10:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:10:20 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:10:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:10:20 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:10:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:10:20 symfony [info] {sfWebDebugLogger} Configuration 9.11 ms (8)
+May 21 19:10:20 symfony [info] {sfWebDebugLogger} Factories 30.47 ms (1)
+May 21 19:10:20 symfony [info] {sfWebDebugLogger} Action "video/put" 28.62 ms (1)
+May 21 19:10:20 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:10:20 symfony [info] {sfWebResponse} Send content (23304 o)
+May 21 19:10:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:10:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:10:28 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:10:28 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:10:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:10:28 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:10:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:10:28 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:10:28 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:10:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:10:28 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:10:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:10:28 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:10:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:10:28 symfony [info] {sfWebDebugLogger} Configuration 6.17 ms (8)
+May 21 19:10:28 symfony [info] {sfWebDebugLogger} Factories 31.24 ms (1)
+May 21 19:10:28 symfony [info] {sfWebDebugLogger} Action "video/put" 29.07 ms (1)
+May 21 19:10:28 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:10:28 symfony [info] {sfWebResponse} Send content (23350 o)
+May 21 19:10:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:10:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:10:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:10:37 symfony [info] {sfPatternRouting} Match route "video_edit" (/video/edit/:id) for /video/edit/3 with parameters array (  'module' => 'video',  'action' => 'edit',  'id' => '3',)
+May 21 19:10:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:10:37 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:10:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:10:37 symfony [info] {videoActions} Call "videoActions->executeEdit()"
+May 21 19:10:37 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:10:37 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:10:37 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/editSuccess.php"
+May 21 19:10:37 symfony [info] {sfPartialView} Render "D:\my_projects\rest.local\apps\frontend\modules/video/templates/_form.php"
+May 21 19:10:37 symfony [info] {sfPHPView} Decorate content with "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 19:10:37 symfony [info] {sfPHPView} Render "D:\my_projects\rest.local\apps\frontend\templates/layout.php"
+May 21 19:10:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+May 21 19:10:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:10:37 symfony [info] {sfWebDebugLogger} Configuration 7.32 ms (9)
+May 21 19:10:37 symfony [info] {sfWebDebugLogger} Factories 31.72 ms (1)
+May 21 19:10:37 symfony [info] {sfWebDebugLogger} Action "video/edit" 34.16 ms (1)
+May 21 19:10:37 symfony [info] {sfWebDebugLogger} View "Success" for "video/edit" 22.94 ms (1)
+May 21 19:10:37 symfony [info] {sfWebDebugLogger} Partial "video/_form" 7.24 ms (1)
+May 21 19:10:37 symfony [info] {sfWebResponse} Send content (36372 o)
+May 21 19:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:11:02 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:11:02 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:11:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:11:02 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:11:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:11:02 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:11:02 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:11:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:11:02 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:11:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+May 21 19:11:02 symfony [info] {sfWebResponse} Send header "Www-Authenticate: Basic realm="""
+May 21 19:11:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:11:02 symfony [info] {sfWebDebugLogger} Configuration 9.61 ms (8)
+May 21 19:11:02 symfony [info] {sfWebDebugLogger} Factories 31.68 ms (1)
+May 21 19:11:02 symfony [info] {sfWebDebugLogger} Action "video/put" 30.64 ms (1)
+May 21 19:11:02 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:11:02 symfony [info] {sfWebResponse} Send content (23285 o)
+May 21 19:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:12:11 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:12:11 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:12:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:12:11 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:12:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:12:11 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:12:11 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:12:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:12:11 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:12:12 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | UPDATE video SET `NAME`='Kirpich', `WIDTH`=640, `HEIGHT`=480, `VIDEO_BITRATE`=356551, `AUDIO_BITRATE`=55950, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/c80cd41049a9677d7bb36fe6dd3a7835202185bd.flv', `UPDATED_AT`='2015-05-21 19:12:12' WHERE video.ID=3
+May 21 19:17:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:17:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:17:09 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:17:09 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:17:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:17:09 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:17:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:17:09 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:17:09 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:17:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:17:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:17:09 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | UPDATE video SET `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/9b2aa6754bba4efee0e107f8ab8dbd0c96f3269f.flv', `UPDATED_AT`='2015-05-21 19:17:09' WHERE video.ID=3
+May 21 19:18:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:18:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:18:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:18:04 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:18:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:18:04 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:18:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:18:04 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:18:04 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:18:04 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:18:04 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:18:04 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | UPDATE video SET `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/fcc904ce85a8826acc31a8f6cee6d2c1e82fd04d.flv', `UPDATED_AT`='2015-05-21 19:18:04' WHERE video.ID=3
+May 21 19:18:04 symfony [err] {sfPropelLogger} SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rest`.`queue`, CONSTRAINT `queue_FK_2` FOREIGN KEY (`status`) REFERENCES `status` (`id`) ON DELETE CASCADE)
+May 21 19:18:04 symfony [err] {PropelException} Unable to execute INSERT statement. [wrapped: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rest`.`queue`, CONSTRAINT `queue_FK_2` FOREIGN KEY (`status`) REFERENCES `status` (`id`) ON DELETE CASCADE)]
+May 21 19:18:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+May 21 19:18:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:18:04 symfony [info] {sfWebDebugLogger} Configuration 8.90 ms (8)
+May 21 19:18:04 symfony [info] {sfWebDebugLogger} Factories 31.40 ms (1)
+May 21 19:18:04 symfony [info] {sfWebDebugLogger} Action "video/put" 298.70 ms (1)
+May 21 19:18:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:18:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:18:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:18:26 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:18:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:18:26 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:18:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:18:26 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:18:26 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:18:26 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:18:26 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:18:26 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | UPDATE video SET `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/aa9224449e9cf7e79aceea059523f8ae112949ad.flv', `UPDATED_AT`='2015-05-21 19:18:26' WHERE video.ID=3
+May 21 19:18:26 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.3 MB | mempeak:    9.3 MB | memdelta:      0.0 B | INSERT INTO queue (`ID`,`VIDEO_ID`,`STATUS`) VALUES (NULL,3,1)
+May 21 19:18:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 202 Accepted"
+May 21 19:18:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:18:26 symfony [info] {sfWebDebugLogger} Configuration 8.63 ms (8)
+May 21 19:18:26 symfony [info] {sfWebDebugLogger} Factories 31.32 ms (1)
+May 21 19:18:26 symfony [info] {sfWebDebugLogger} Action "video/put" 277.25 ms (1)
+May 21 19:18:26 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:18:26 symfony [info] {sfWebResponse} Send content (25106 o)
+May 21 19:19:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:19:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:19:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:19:26 symfony [info] {sfPatternRouting} Match route "video_put" (/video/put/:id) for /video/put/3 with parameters array (  'module' => 'video',  'action' => 'put',  'id' => '3',)
+May 21 19:19:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:19:26 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:19:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:19:26 symfony [info] {videoActions} Call "videoActions->executePut()"
+May 21 19:19:26 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:19:26 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.0 MB | mempeak:    6.0 MB | memdelta:      0.0 B | SELECT video.ID, video.NAME, video.WIDTH, video.HEIGHT, video.VIDEO_BITRATE, video.AUDIO_BITRATE, video.USER_ID, video.FILENAME, video.CREATED_AT, video.UPDATED_AT FROM `video` WHERE video.ID='3'
+May 21 19:19:26 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:19:26 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | UPDATE video SET `WIDTH`=320, `HEIGHT`=240, `VIDEO_BITRATE`=559822, `AUDIO_BITRATE`=20000, `FILENAME`='D:\\my_projects\\rest.local\\web\\uploads/video/2e39c7b3a28f8a7dde5be1c7e96b59b8f1c6df79.avi', `UPDATED_AT`='2015-05-21 19:19:26' WHERE video.ID=3
+May 21 19:19:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 202 Accepted"
+May 21 19:19:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:19:26 symfony [info] {sfWebDebugLogger} Configuration 8.35 ms (8)
+May 21 19:19:26 symfony [info] {sfWebDebugLogger} Factories 31.83 ms (1)
+May 21 19:19:26 symfony [info] {sfWebDebugLogger} Action "video/put" 133.27 ms (1)
+May 21 19:19:26 symfony [info] {sfWebDebugLogger} View "None" for "video/put" 0.02 ms (1)
+May 21 19:19:26 symfony [info] {sfWebResponse} Send content (24231 o)
+May 21 19:23:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:23:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:23:22 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:23:22 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/video/post/3" (/).
+May 21 19:23:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+May 21 19:23:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:23:22 symfony [info] {sfWebDebugLogger} Configuration 5.58 ms (5)
+May 21 19:23:22 symfony [info] {sfWebDebugLogger} Factories 32.12 ms (1)
+May 21 19:23:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:23:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:23:35 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:23:35 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 21 19:23:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:23:35 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:23:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:23:35 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 21 19:23:35 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:23:35 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:23:35 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'KirpichNew',640,480,356551,55950,1,'D:\\my_projects\\rest.local\\web\\uploads/video/023890d28390853e03843a018312429a7c4a5165.flv','2015-05-21 19:23:35','2015-05-21 19:23:35')
+May 21 19:23:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 201 Created"
+May 21 19:23:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:23:35 symfony [info] {sfWebDebugLogger} Configuration 7.85 ms (8)
+May 21 19:23:35 symfony [info] {sfWebDebugLogger} Factories 32.26 ms (1)
+May 21 19:23:35 symfony [info] {sfWebDebugLogger} Action "video/post" 147.07 ms (1)
+May 21 19:23:35 symfony [info] {sfWebDebugLogger} View "None" for "video/post" 0.02 ms (1)
+May 21 19:23:35 symfony [info] {sfWebResponse} Send content (23093 o)
+May 21 19:24:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 21 19:24:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 21 19:24:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 21 19:24:53 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 21 19:24:53 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 21 19:24:53 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 21 19:24:53 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 21 19:24:53 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 21 19:24:53 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    5.8 MB | mempeak:    5.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 21 19:24:53 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.3 MB | mempeak:    6.3 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.ID=1
+May 21 19:24:53 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    8.8 MB | mempeak:    9.0 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'KirpichNew2',640,480,356551,55950,1,'D:\\my_projects\\rest.local\\web\\uploads/video/6dae00d3e298a5996ed734a40c7fbc17b3551d4e.flv','2015-05-21 19:24:53','2015-05-21 19:24:53')
+May 21 19:24:53 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.3 MB | mempeak:    9.3 MB | memdelta:      0.0 B | INSERT INTO queue (`ID`,`VIDEO_ID`,`STATUS`) VALUES (NULL,6,1)
+May 21 19:24:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 201 Created"
+May 21 19:24:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 21 19:24:53 symfony [info] {sfWebDebugLogger} Configuration 8.83 ms (8)
+May 21 19:24:53 symfony [info] {sfWebDebugLogger} Factories 31.33 ms (1)
+May 21 19:24:53 symfony [info] {sfWebDebugLogger} Action "video/post" 179.96 ms (1)
+May 21 19:24:53 symfony [info] {sfWebDebugLogger} View "None" for "video/post" 0.02 ms (1)
+May 21 19:24:53 symfony [info] {sfWebResponse} Send content (24104 o)
+May 23 14:30:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 23 14:30:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 23 14:30:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 23 14:30:10 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 23 14:30:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 14:30:10 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 23 14:30:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 14:30:10 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 23 14:30:10 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    7.8 MB | mempeak:    7.8 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 23 14:30:10 symfony [debug] {sfPropelLogger} time:  0.022 sec | slow:  NO | mem:    8.0 MB | mempeak:    8.0 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.USERNAME='tester' AND sf_guard_user.IS_ACTIVE=1 LIMIT 1
+May 23 14:30:10 symfony [info] {myUser} User is authenticated
+May 23 14:30:10 symfony [debug] {sfPropelLogger} time:  0.032 sec | slow:  NO | mem:    9.3 MB | mempeak:    9.3 MB | memdelta:      0.0 B | SELECT sf_guard_user_permission.USER_ID, sf_guard_user_permission.PERMISSION_ID, sf_guard_permission.ID, sf_guard_permission.NAME, sf_guard_permission.DESCRIPTION FROM `sf_guard_user_permission` LEFT JOIN sf_guard_permission ON (sf_guard_user_permission.PERMISSION_ID=sf_guard_permission.ID) WHERE sf_guard_user_permission.USER_ID=2
+May 23 14:30:10 symfony [debug] {sfPropelLogger} time:  0.035 sec | slow:  NO | mem:    9.8 MB | mempeak:    9.8 MB | memdelta:      0.0 B | SELECT sf_guard_user_group.USER_ID, sf_guard_user_group.GROUP_ID, sf_guard_group.ID, sf_guard_group.NAME, sf_guard_group.DESCRIPTION FROM `sf_guard_user_group` LEFT JOIN sf_guard_group ON (sf_guard_user_group.GROUP_ID=sf_guard_group.ID) WHERE sf_guard_user_group.USER_ID=2
+May 23 14:30:10 symfony [info] {myUser} Add credential(s) ""
+May 23 14:30:10 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.8 MB | mempeak:   10.0 MB | memdelta:      0.0 B | UPDATE sf_guard_user SET `LAST_LOGIN`='2015-05-23 14:30:10' WHERE sf_guard_user.ID=2
+May 23 14:30:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   11.5 MB | mempeak:   11.8 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'Kirpichik',640,480,356551,55950,2,'D:\\my_projects\\rest.local\\web\\uploads/video/6375bac10fab4ee280988772f08f3476f68f667a.flv','2015-05-23 14:30:11','2015-05-23 14:30:11')
+May 23 14:30:11 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   12.0 MB | mempeak:   12.0 MB | memdelta:      0.0 B | INSERT INTO queue (`ID`,`VIDEO_ID`,`STATUS`) VALUES (NULL,7,1)
+May 23 14:30:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 201 Created"
+May 23 14:30:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 14:30:11 symfony [info] {sfWebDebugLogger} Configuration 1035.27 ms (10)
+May 23 14:30:11 symfony [info] {sfWebDebugLogger} Factories 668.23 ms (1)
+May 23 14:30:11 symfony [info] {sfWebDebugLogger} Action "video/post" 625.99 ms (1)
+May 23 14:30:11 symfony [info] {sfWebDebugLogger} View "None" for "video/post" 0.02 ms (1)
+May 23 14:30:11 symfony [info] {sfWebResponse} Send content (28949 o)
+May 23 16:21:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/login)
+May 23 16:21:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/logout)
+May 23 16:21:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_password" (/request_password)
+May 23 16:21:41 symfony [info] {sfPatternRouting} Match route "video_post" (/video/post/) for /video/post/ with parameters array (  'module' => 'video',  'action' => 'post',)
+May 23 16:21:42 symfony [info] {myUser} Automatic user logout due to timeout
+May 23 16:21:42 symfony [info] {myUser} User is not authenticated
+May 23 16:21:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+May 23 16:21:42 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+May 23 16:21:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+May 23 16:21:42 symfony [info] {videoActions} Call "videoActions->executePost()"
+May 23 16:21:42 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    6.5 MB | mempeak:    6.5 MB | memdelta:      0.0 B | SET NAMES 'utf8'
+May 23 16:21:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    6.8 MB | mempeak:    6.8 MB | memdelta:      0.0 B | SELECT sf_guard_user.ID, sf_guard_user.USERNAME, sf_guard_user.ALGORITHM, sf_guard_user.SALT, sf_guard_user.PASSWORD, sf_guard_user.CREATED_AT, sf_guard_user.LAST_LOGIN, sf_guard_user.IS_ACTIVE, sf_guard_user.IS_SUPER_ADMIN FROM `sf_guard_user` WHERE sf_guard_user.USERNAME='tester' AND sf_guard_user.IS_ACTIVE=1 LIMIT 1
+May 23 16:21:42 symfony [info] {myUser} User is authenticated
+May 23 16:21:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.0 MB | mempeak:    9.0 MB | memdelta:      0.0 B | SELECT sf_guard_user_permission.USER_ID, sf_guard_user_permission.PERMISSION_ID, sf_guard_permission.ID, sf_guard_permission.NAME, sf_guard_permission.DESCRIPTION FROM `sf_guard_user_permission` LEFT JOIN sf_guard_permission ON (sf_guard_user_permission.PERMISSION_ID=sf_guard_permission.ID) WHERE sf_guard_user_permission.USER_ID=2
+May 23 16:21:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:    9.5 MB | mempeak:    9.5 MB | memdelta:      0.0 B | SELECT sf_guard_user_group.USER_ID, sf_guard_user_group.GROUP_ID, sf_guard_group.ID, sf_guard_group.NAME, sf_guard_group.DESCRIPTION FROM `sf_guard_user_group` LEFT JOIN sf_guard_group ON (sf_guard_user_group.GROUP_ID=sf_guard_group.ID) WHERE sf_guard_user_group.USER_ID=2
+May 23 16:21:42 symfony [info] {myUser} Add credential(s) ""
+May 23 16:21:42 symfony [debug] {sfPropelLogger} time:  0.000 sec | slow:  NO | mem:    9.5 MB | mempeak:    9.5 MB | memdelta:      0.0 B | UPDATE sf_guard_user SET `LAST_LOGIN`='2015-05-23 16:21:42' WHERE sf_guard_user.ID=2
+May 23 16:21:42 symfony [debug] {sfPropelLogger} time:  0.001 sec | slow:  NO | mem:   11.0 MB | mempeak:   11.5 MB | memdelta:      0.0 B | INSERT INTO video (`ID`,`NAME`,`WIDTH`,`HEIGHT`,`VIDEO_BITRATE`,`AUDIO_BITRATE`,`USER_ID`,`FILENAME`,`CREATED_AT`,`UPDATED_AT`) VALUES (NULL,'Over',640,480,356551,55950,2,'D:\\my_projects\\rest.local\\web\\uploads/video/39b75ce88a47bf85abba9d11925c1483a630f95d.flv','2015-05-23 16:21:42','2015-05-23 16:21:42')
+May 23 16:21:42 symfony [debug] {sfPropelLogger} time:  0.021 sec | slow:  NO | mem:   11.5 MB | mempeak:   11.8 MB | memdelta:      0.0 B | INSERT INTO queue (`ID`,`VIDEO_ID`,`STATUS`) VALUES (NULL,8,1)
+May 23 16:21:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 201 Created"
+May 23 16:21:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+May 23 16:21:42 symfony [info] {sfWebDebugLogger} Configuration 180.90 ms (10)
+May 23 16:21:42 symfony [info] {sfWebDebugLogger} Factories 35.84 ms (1)
+May 23 16:21:42 symfony [info] {sfWebDebugLogger} Action "video/post" 528.71 ms (1)
+May 23 16:21:42 symfony [info] {sfWebDebugLogger} View "None" for "video/post" 0.02 ms (1)
+May 23 16:21:42 symfony [info] {sfWebResponse} Send content (29856 o)

@@ -10,3 +10,18 @@ propel:
     filename: { type: varchar(255) }
     created_at: ~
     updated_at: ~
+  
+  status:
+    id: ~
+    name: { type: varchar(255), required: true }
+  
+  queue:
+    id: ~
+    video_id: { type: integer, foreignTable: video, foreignReference: id, required: true, onDelete: CASCADE }
+    status: { type: integer, foreignTable: status, foreignReference: id, required: true, onDelete: CASCADE }
+  
+  video_link:
+    id: ~
+    original: { type: integer, foreignTable: video, foreignReference: id, required: true, onDelete: CASCADE }
+    converted: { type: integer, foreignTable: video, foreignReference: id, required: true, onDelete: CASCADE }
+     

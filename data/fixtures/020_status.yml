@@ -1,0 +1,9 @@
+status:
+  on_queue:
+    name: On queue
+  in_progress:
+    name: In progress
+  success:
+    name: Success
+  failure:
+    name: Failure
